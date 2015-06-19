@@ -29,7 +29,7 @@ class Boxen::Preflight::Creds < Boxen::Preflight
   end
 
   def headers
-    otp.nil? ? {} : {"X-GitHub-OTP" => otp}
+    otp.nil? ? {} : {"X-GitHub-OTP" => otp, "Accept" => "application/vnd.github.mirage-preview+json"}
   end
 
   def get_otp
